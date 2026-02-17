@@ -1,11 +1,11 @@
 # 🚀 Cost-Aware LLM Inference Optimizer (CPU MVP)
 
-🔗 **Live Demo:**  
+ **Live Demo:**  
 https://llm-cost-aware-inference-optimizer-aohn2vtjqdqbhgzskm9ceg.streamlit.app/
 
----
 
-## 📌 Overview
+
+##  Overview
 
 Large Language Model (LLM) inference cost is governed by:
 
@@ -23,9 +23,9 @@ This project implements a **cost-aware inference router** that:
 
 All experiments are performed on CPU to simulate constrained hardware environments.
 
----
 
-## 🧠 Problem Motivation
+
+##  Problem Motivation
 
 In production systems, inference must satisfy strict service-level objectives (SLOs):
 
@@ -40,9 +40,9 @@ However, LLM inference performance depends on interacting factors:
 
 This project treats inference as a **search over execution plans** and selects the best configuration under measurable constraints.
 
----
 
-## ⚙️ Execution Plan Search Space
+
+## Execution Plan Search Space
 
 Each plan is defined by:
 
@@ -55,9 +55,9 @@ Each plan is defined by:
 
 Total plans searched: **24**
 
----
 
-## 📊 Metrics Measured
+
+## Metrics Measured
 
 For each execution plan:
 
@@ -78,9 +78,7 @@ Final selection must satisfy:
 p50_latency ≤ SLA
 ```
 
----
-
-## 🏆 Example Result (Windows CPU)
+## Example Result (Windows CPU)
 
 **Chosen Plan (SLA = 1500 ms)**
 
@@ -94,9 +92,8 @@ p50_latency ≤ SLA
 
 Dynamic INT8 quantization combined with thread-level parallelism provided the highest throughput under constrained latency.
 
----
 
-## 🖥 Live Demo
+## Live Demo
 
 The deployed Streamlit app allows users to:
 
@@ -109,7 +106,6 @@ The deployed Streamlit app allows users to:
 👉 Try it here:  
 https://llm-cost-aware-inference-optimizer-aohn2vtjqdqbhgzskm9ceg.streamlit.app/
 
----
 
 ## 🏗 Systems Perspective
 
@@ -124,7 +120,6 @@ Instead of assuming fixed execution, it:
 
 This mirrors real-world inference scheduling strategies used in production ML systems.
 
----
 
 ## 🚀 GPU Extension (Design)
 
@@ -143,7 +138,6 @@ This enables optimization across:
 - Kernel efficiency  
 - KV-cache fragmentation  
 
----
 
 ## 🛠 Run Locally
 
@@ -157,8 +151,6 @@ Launch UI:
 streamlit run app.py
 ```
 
----
-
 ## 📦 Tech Stack
 
 - PyTorch  
@@ -168,7 +160,6 @@ streamlit run app.py
 - Streamlit (deployment)  
 - Conda (environment management)  
 
----
 
 ## 🎯 Why This Project Matters
 
@@ -181,8 +172,6 @@ It demonstrates:
 - Systems-level experimentation  
 - End-to-end research → deployment workflow  
 
----
----
 
 ## 📸 Application Preview
 
@@ -195,7 +184,6 @@ It demonstrates:
 This visualization shows the full execution search space across 24 plans.  
 Plans are ranked by p50 latency and memory footprint.
 
----
 
 ### 🏆 Automatically Selected Optimal Plan
 
@@ -205,7 +193,6 @@ Plans are ranked by p50 latency and memory footprint.
 
 The optimizer selects the best configuration satisfying the SLA constraint.
 
----
 
 ### 📈 Full Plan Summary (Sorted by p50 Latency)
 
@@ -215,7 +202,6 @@ The optimizer selects the best configuration satisfying the SLA constraint.
 
 All execution plans are benchmarked and ranked.
 
----
 
 ### 🖥 End-to-End Streamlit Interface
 
@@ -225,5 +211,4 @@ All execution plans are benchmarked and ranked.
 
 Interactive UI allows dynamic SLA adjustment and execution plan search.
 
----
 
