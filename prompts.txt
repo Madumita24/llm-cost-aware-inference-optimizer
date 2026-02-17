@@ -1,0 +1,5 @@
+Summarize the following email in one sentence:
+Explain what attention is in transformers in simple words.
+Write a short Python function that checks if a string is a palindrome.
+Draft a polite message asking for a meeting reschedule.
+Give three bullet points comparing SSD vs HDD.
